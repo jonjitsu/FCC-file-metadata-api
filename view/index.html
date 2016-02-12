@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Metadata Microservice</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="header">
+                File Metadata Microservice
+            </h1>
+    <blockquote>
+      User stories:
+      <ul>
+        <li>I can submit a FormDataobject that includes a file upload.</li>
+        <li>When I submit something, I will receive the file size in bytes within the JSON response</li>
+      </ul>
+    </blockquote>
+    <h4>Example usage:</h2>
+              <ul>
+                <li>curl --form 'payload=@package.json' 'http://localhost:3000/api/analyze?pretty'
+</li>
+              </ul>
+            <h4>Easy to use form</h4>
+    <div id="file-form-container">
+      <form id="file-uploader" enctype="multipart/form-data" role="form" class="form-inline">
+        <div class="form-group">
+          <input type="file" name="payload" class='form-control'>
+          <input type="submit" value="Upload" class='btn btn-default'>
+
+        </div>
+      </form>
+    </div>
+    <div id="status" class="lead"></div>
+  </div>
+  <script src="/public/file-uploader.js">
+  </script>
+</body>
+
+</html>
